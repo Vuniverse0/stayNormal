@@ -13,12 +13,11 @@
 
 struct Entry {
     Entry() = delete;
-    explicit Entry(const std::string& a_string,
-                   std::float_t x_ratio = 1, std::float_t y_ratio = 1, bool smooth = false);
+    explicit Entry(const std::string& a_string, cords x_ratio = 1, cords y_ratio = 1, bool smooth = false);
     Entry(const Entry& ent);
     virtual ~Entry() = default;
 
-    void scale(std::float_t x, std::float_t y);
+    void scale(cords x, cords y);
     virtual void move(cords x, cords y);
     void moveWord(cords x, cords y);
     void setPosition(cords x, cords y);
@@ -30,9 +29,9 @@ struct Entry {
     sf::Vector2f getOrigin() const;
 
     bool hide(), show();
-    virtual void update(sf::Time deltaTime) = 0;
-    virtual void handle(const sf::Event& event) = 0;
-    virtual void draw(sf::RenderTarget& target, const sf::RenderStates& states = sf::RenderStates::Default) const;
+    virtual void update(sf::Time deltaTime);
+    virtual void handle(const sf::Event &event);
+    virtual void draw(sf::RenderTarget &target, const sf::RenderStates &states = sf::RenderStates::Default) const;
 
 protected:
     sf::Sprite m_sprite{};

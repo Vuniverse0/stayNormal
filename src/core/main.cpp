@@ -45,7 +45,7 @@ int main()
     ui.MouseMoved = {UiMouseMoved};
     ui.gui = {Gui};
 
-    Main_Character mainCharacter(Main_Character_Skin::Outside);
+    Main_Character mainCharacter{};
     mainCharacter.moveWord(0.05, 0.5);
 
     std::array<Entry*, 1> entries{&mainCharacter};

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../primitives/Range.hpp"
+#include "../utility/Range.hpp"
 
 #include <SFML/Window/Event.hpp>
 #include <SFML/Graphics/RenderStates.hpp>

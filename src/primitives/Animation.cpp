@@ -33,7 +33,7 @@ Animation& Animation::operator=(const Animation& other)
 #endif
 
 
-bool Animation::play(sf::Sprite* sprite, float_t speed, bool direction)
+bool Animation::play(sf::Sprite* sprite, std::float_t speed, bool direction)
 {
     if(!m_alt_texture){
         m_alt_texture = sprite->getTexture();

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Directions.h"
-#include "../primitives/Range.hpp"
+#include "../utility/Range.hpp"
 
 
 namespace Place{

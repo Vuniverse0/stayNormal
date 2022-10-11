@@ -18,7 +18,16 @@ add_executable(stayNormal
         src/interface/Gui.cpp
         src/interface/Corner.cpp
         src/interface/Button.cpp
-        src/interface/Panel.cpp src/gamestates/Walk.cpp src/gamestates/Walk.hpp)
+        src/interface/Panel.cpp
+        src/gamestates/Walk.cpp src/gamestates/Phone.cpp src/gamestates/Phone.hpp)
 
 #target_compile_options(stayNormal PUBLIC)
-target_link_libraries(stayNormal sfml-graphics sfml-window sfml-system)#-static TODO static linkage
+
+target_link_libraries(stayNormal sfml-graphics sfml-window sfml-system)
+
+if (CMAKE_BUILD_TYPE STREQUAL "Debug")
+    #add_definitions(-DBUILD_SHARED_LIBS=OFF  -DSFML_STATIC)
+    #target_link_libraries(stayNormal sfml-graphics sfml-window-s-d sfml-system-s-d -static)
+ELSE()
+    #target_link_libraries(stayNormal sfml-graphics-s sfml-window-s sfml-system-s -static -s)
+ENDIF()

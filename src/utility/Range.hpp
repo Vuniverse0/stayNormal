@@ -1,6 +1,9 @@
 #ifndef STAYNORMAL_RANGE_HPP
 #define STAYNORMAL_RANGE_HPP
 
+#include <stdexcept>
+
+
 template<typename Iterator>
 class Range{
     Iterator m_begin, m_end;
@@ -18,6 +21,19 @@ public:
 
     void begin(Iterator begin) { m_begin = begin;}
     void end(Iterator end) { m_end = end;}
+
+    template<typename T>
+    T& operator[](std::size_t n)
+    { return *(m_begin + n); }
+
+    template<typename T>
+    T& at(std::size_t n)
+    {
+        for(std::size_t i = 0; i <= n; ++i)
+            if(m_begin + i == m_end)
+                throw std::out_of_range("utility/Range");
+        return (*this)[n];
+    }
 };
 
 #endif //STAYNORMAL_RANGE_HPP

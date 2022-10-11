@@ -58,4 +58,4 @@ T enum_default()
 #define enum_default(enum_name, that) \
 template<> \
 inline enum_name enum_default<enum_name>() \
-{ return enum_name::that; } \
+{ return enum_name::that; }

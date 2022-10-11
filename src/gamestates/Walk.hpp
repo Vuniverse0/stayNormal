@@ -13,14 +13,14 @@ struct WalkData : Data {
     Direction view;
     sf::Vector2i target;
     Entry* entry;
-
-    static const std::size_t WalkData_type;
+    DATA_INDEX_DECL(WalkData);
 };
 
 struct WalkHandle : Handle {
     void handle(const sf::Event &event, Data *data) override;
     void update(sf::Time deltaTime, Data *data) override;
-    static WalkHandle Handle;
+    HANDLE_DECL(WalkHandle);
+
 protected:
     WalkHandle() = default;
 };

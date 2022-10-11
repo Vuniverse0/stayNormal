@@ -89,3 +89,9 @@ void Entry::scale(std::float_t x, std::float_t y)
 {
     m_sprite.scale(x, y);
 }
+
+void Entry::update(sf::Time deltaTime)
+{}
+
+void Entry::handle(const sf::Event &event)
+{}
