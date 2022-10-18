@@ -19,7 +19,7 @@ add_executable(stayNormal
         src/interface/Corner.cpp
         src/interface/Button.cpp
         src/interface/Panel.cpp
-        src/gamestates/Walk.cpp src/gamestates/Phone.cpp src/gamestates/Phone.hpp)
+        src/gamestates/Walk_State.cpp src/gamestates/Phone_State.cpp src/gamestates/Phone_State.hpp src/gamestates/GameEvent.cpp src/gamestates/GameEvent.hpp src/objects/Dialogue.cpp src/objects/Dialogue.hpp src/objects/Phrase.hpp src/gamestates/Dialogue_State.cpp src/gamestates/Dialogue_State.hpp)
 
 #target_compile_options(stayNormal PUBLIC)
 

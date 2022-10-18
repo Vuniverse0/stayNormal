@@ -91,7 +91,7 @@ void Entry::scale(std::float_t x, std::float_t y)
 }
 
 void Entry::update(sf::Time deltaTime)
-{}
+{ assert(false); }
 
 void Entry::handle(const sf::Event &event)
-{}
+{ assert(false); }

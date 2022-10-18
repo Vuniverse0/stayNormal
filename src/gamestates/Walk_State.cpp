@@ -1,4 +1,4 @@
-#include "Walk.hpp"
+#include "Walk_State.hpp"
 
 #include <cassert>
 #include <iostream>
@@ -6,20 +6,19 @@
 
 DATA_INDEX_IMPL(WalkData);
 
-HANDLE_IMPL(WalkHandle);
-
 WalkData::WalkData(Entry *a_entry, Direction a_view)
     :entry{a_entry}
     ,view{a_view}
-{   Data::type = WalkData_type; }
+{   Data::type = WalkData::data_type; }
+
+
+HANDLE_IMPL(WalkHandle);
 
 void WalkHandle::handle(const sf::Event &event, Data *data)
 {
-    assert(event.type == sf::Event::MouseButtonReleased);
-    assert(data);
-    assert(data->type == WalkData::WalkData_type);
+    DATA_CAST(walkData);
 
-    WalkData *walkData{ reinterpret_cast<WalkData*>(data) };
+    assert(event.type == sf::Event::MouseButtonReleased);
 
     assert(walkData->entry);
 
@@ -38,10 +37,7 @@ void WalkHandle::handle(const sf::Event &event, Data *data)
 
 void WalkHandle::update(sf::Time deltaTime, Data *data)
 {
-    assert(data);
-    assert(data->type == WalkData::WalkData_type);
-
-    WalkData *walkData{ reinterpret_cast<WalkData*>(data) };
+    DATA_CAST(walkData);
 
     assert(walkData->entry);
 
@@ -51,4 +47,3 @@ void WalkHandle::update(sf::Time deltaTime, Data *data)
             std::abs(walkData->entry->getPosition().x - static_cast<std::float_t>(walkData->target.x)) < 10.f
             ? Direction::None : walkData->direction;
 }
-
