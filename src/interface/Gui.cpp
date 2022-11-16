@@ -32,20 +32,19 @@ Activable::Activable(sf::Sprite *a_p_sprite)
 void Activable::enable()
 {
     m_active = true;
-    sf::Uint8 light = 255; // 255 = initial brightness, 0 = black
-    m_p_sprite->setColor(sf::Color(light, light, light));
+    m_p_sprite->setColor(sf::Color(m_light, m_light, m_light));
 }
 
 void Activable::disable()
 {
     m_active = false;
-    sf::Uint8 light = 0 + 255 / 2; // 255 = initial brightness, 0 = black
-    m_p_sprite->setColor(sf::Color(light, light, light));
+    m_p_sprite->setColor(sf::Color(m_dark, m_dark, m_dark));
 }
 
 bool Activable::is_active() const { return m_active; }
 
-
+void Activable::set(sf::Uint8 light, sf::Uint8 dark)
+{ m_dark = dark, m_light = light; }
 
 
 bool Unfold::handle(bool fold)

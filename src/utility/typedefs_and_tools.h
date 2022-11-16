@@ -23,6 +23,7 @@ namespace ratio {
 
     cords x_ratio();
     cords y_ratio();
+    ///TODO maybe this may be window.map methods
 
     pixels x_size();
     pixels y_size();

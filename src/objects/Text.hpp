@@ -9,7 +9,9 @@ struct Text : Entry {
 
     void update(sf::Time deltaTime) override;
     void handle(const sf::Event &event) override;
-    void draw(sf::RenderTarget &target, const sf::RenderStates &states = sf::RenderStates::Default) const override;
+
+protected:
+    void m_draw(sf::RenderTarget &target, const sf::RenderStates &states) const override;
 
 private:
     sf::Text m_text;

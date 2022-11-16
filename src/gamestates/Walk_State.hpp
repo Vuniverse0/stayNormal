@@ -3,16 +3,16 @@
 
 #include "Game_State.hpp"
 
-#include "../primitives/Entry.h"
 #include "../interface/Directions.h"
+#include "../primitives/Sprite.hpp"
 
 
 struct WalkData : Game_State::Data {
-    explicit WalkData(Entry *a_entry, Direction a_view);
+    explicit WalkData(Sprite *a_entry, Direction a_view);
     Direction direction = Direction::None;
     Direction view;
     sf::Vector2i target;
-    Entry* entry;
+    Sprite* entry;
     DATA_INDEX_DECL(WalkData);
 };
 

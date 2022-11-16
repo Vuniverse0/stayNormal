@@ -30,7 +30,7 @@ Main_Character::Main_Character(Main_Character_Skin a_state)
 #undef MAIN_CHARACTER_ANIMATION
             }
         },
-        Entry{
+        Sprite{
             "../resources/characters/main_character/main_character1.png",//todo make empty
             1, 1
         },
@@ -55,9 +55,9 @@ void Main_Character::update(sf::Time deltaTime)
             m_walkData.view = m_walkData.direction, flip();
 
         if (m_walkData.direction == Direction::Right)
-            Entry::m_sprite.move(100 * deltaTime.asSeconds(), 0);
+            m_sprite.move(100 * deltaTime.asSeconds(), 0);
         else
-            Entry::m_sprite.move(-100 * deltaTime.asSeconds(), 0), assert(m_walkData.direction == Direction::Left);
+            m_sprite.move(-100 * deltaTime.asSeconds(), 0), assert(m_walkData.direction == Direction::Left);
     }else if(m_current_animation == Main_Character_Animation::Walk){
         m_animations[static_cast<std::size_t>(m_skin)].stop(static_cast<std::size_t>(m_current_animation));
         m_current_animation = Main_Character_Animation::Stay; //WRITE THERE

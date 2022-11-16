@@ -6,7 +6,7 @@
 
 DATA_INDEX_IMPL(WalkData);
 
-WalkData::WalkData(Entry *a_entry, Direction a_view)
+WalkData::WalkData(Sprite *a_entry, Direction a_view)
     :entry{a_entry}
     ,view{a_view}
 {   Data::type = WalkData::data_type; }

@@ -4,10 +4,11 @@
 #include "Place.h"
 
 
-struct Gui : Entry{
+struct Gui : virtual Entry{
     using Entry::Entry;
     ~Gui() override = default;
 };
+
 
 struct Hover{
     void handle(const sf::Event& event);
@@ -22,9 +23,9 @@ private:
 };
 
 struct Shorten{
+    explicit Shorten(sf::Vector2f a_normal_scale, sf::Sprite* a_p_sprite);
     void handle();
     void use();
-    explicit Shorten(sf::Vector2f a_normal_scale, sf::Sprite* a_p_sprite);
 protected:
     sf::Sprite* m_p_sprite;
     sf::Vector2f m_normal_scale;
@@ -38,13 +39,18 @@ struct Longen : private Shorten{
 };
 
 struct Activable{
+    explicit Activable(sf::Sprite* a_p_sprite);
+
     void enable();
     void disable();
+    // 255 = initial brightness, 0 = black
+    void set(sf::Uint8 light, sf::Uint8 dark);
     [[nodiscard]] bool is_active() const;
-    explicit Activable(sf::Sprite* a_p_sprite);
 protected:
     sf::Sprite* m_p_sprite;
 private:
+    sf::Uint8 m_dark =  255 / 2;
+    sf::Uint8 m_light =  255;
     bool m_active{true};
 };
 

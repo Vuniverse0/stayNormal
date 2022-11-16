@@ -1,10 +1,11 @@
 #pragma once
 
 #include "Gui.h"
+#include "../primitives/Sprite.hpp"
 
 
-struct Button : public Gui, public Activable{
-    explicit Button(void (*lambd)(), const std::string& a_string);
+struct Button :  Gui, Sprite, Activable{
+    explicit Button(std::function<void()> callback, const std::string& a_string);
     ~Button() override = default;
     void update(sf::Time deltaTime) override;
     /// MouseMoved | MouseButtonReleased
@@ -15,5 +16,5 @@ private:
     Shorten m_onClick;
     Longen m_onMouse;
     Hover m_hover;
-    void (*m_changer)();
+    std::function<void()> m_changer;
 };

@@ -32,7 +32,7 @@ add_executable(stayNormal
         src/gamestates/GameEvent.cpp
         src/gamestates/Dialogue_State.cpp
 
-        )
+        src/primitives/Sprite.cpp src/primitives/Sprite.hpp)
 
 #target_compile_options(stayNormal PUBLIC)
 

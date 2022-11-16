@@ -2,10 +2,8 @@
 #include "../core/Handler.h"
 
 
-void Panel::draw(sf::RenderTarget& target, const sf::RenderStates& states) const
+void Panel::m_draw(sf::RenderTarget& target, const sf::RenderStates& states) const
 {
-    if ( !m_visibility )
-        return;
     target.draw(m_sprite, states);
     for (auto it : m_buttons)
         it->draw(target, states);
@@ -25,7 +23,7 @@ void Panel::handle(const sf::Event& event)
 
 Panel::Panel(Range<iterator_type> a_group, const std::string &a_sprite,
              std::float_t x_ratio, std::float_t y_ratio, bool smooth)
-    :Gui(a_sprite, x_ratio, y_ratio, smooth)
+    :Sprite(a_sprite, x_ratio, y_ratio, smooth)
     ,m_buttons{a_group}
 {
     m_sprite.setPosition(Corner::ship(Anchor::CenterLeft, m_sprite));

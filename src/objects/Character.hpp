@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../primitives/Entry.h"
+#include "../primitives/Sprite.hpp"
 #include "../primitives/Animated.h"
 #include "../gamestates/Game_State.hpp"
 
@@ -9,15 +9,15 @@ template<size_t Skin, size_t Anim>
 using Files = std::array<const std::array<std::pair<const std::string, const frames>, Anim>, Skin>;
 
 template<typename Skin_T, typename Animation_T>
-struct Character : Entry {
+struct Character : Sprite {
 protected:
     inline static constexpr std::size_t Skins_Size = static_cast<std::size_t>(Skin_T::Size);
     inline static constexpr std::size_t Animations_Size = static_cast<std::size_t>(Animation_T::Size);
     using Character_Files = Files<Skins_Size, Animations_Size>;
 public:
     Character(std::array<Animated<Animations_Size>, Skins_Size> animations,
-              Entry entry, Game_State *game_state = nullptr)
-        :Entry(entry)
+              Sprite entry, Game_State *game_state = nullptr)
+        :Sprite(entry)
         ,m_animations{animations}
         ,m_game_state{game_state}
     {}
