@@ -9,17 +9,30 @@ add_executable(stayNormal
         src/core/Game.cpp
         src/core/Ui.cpp
         src/core/World.cpp
-        src/primitives/Animation.cpp
+
         src/utility/tools.cpp
+
+        src/primitives/Animation.cpp
         src/primitives/Entry.cpp
-        src/gamestates/Game_State.cpp
+
         src/objects/Main_Character.cpp
+        src/objects/Dialogue.cpp
+        src/objects/Phrase.cpp
+        src/objects/Text.cpp
+
         src/interface/Directions.cpp
         src/interface/Gui.cpp
         src/interface/Corner.cpp
         src/interface/Button.cpp
         src/interface/Panel.cpp
-        src/gamestates/Walk_State.cpp src/gamestates/Phone_State.cpp src/gamestates/Phone_State.hpp src/gamestates/GameEvent.cpp src/gamestates/GameEvent.hpp src/objects/Dialogue.cpp src/objects/Dialogue.hpp src/objects/Phrase.hpp src/gamestates/Dialogue_State.cpp src/gamestates/Dialogue_State.hpp)
+
+        src/gamestates/Game_State.cpp
+        src/gamestates/Walk_State.cpp
+        src/gamestates/Phone_State.cpp
+        src/gamestates/GameEvent.cpp
+        src/gamestates/Dialogue_State.cpp
+
+        )
 
 #target_compile_options(stayNormal PUBLIC)
 

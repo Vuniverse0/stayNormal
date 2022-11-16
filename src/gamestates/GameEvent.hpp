@@ -6,7 +6,7 @@ struct GameEvent {
     enum class GameEventType{None, Call, GameOver, Size, Error} type;
     union{
         struct{
-            std::string
+           // std::string
         }call;
     }data;
 };

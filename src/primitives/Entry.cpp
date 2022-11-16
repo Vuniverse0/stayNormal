@@ -1,7 +1,5 @@
 #include "Entry.h"
 
-#include "../utility/typedefs_and_tools.h"
-
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <iostream>
 
@@ -38,16 +36,10 @@ bool Entry::show() ///return true if state was changed
 }
 
 void Entry::draw(sf::RenderTarget &target, const sf::RenderStates &states) const
-{
-    if(m_visibility)
-        target.draw(m_sprite);
-    //std::cout << m_object_texture.getSize().x<<std::endl;
-}
+{ if(m_visibility) target.draw(m_sprite, states); }
 
 void Entry::setPosition(cords x, cords y)
-{
-    m_sprite.setPosition(x, y);
-}
+{ m_sprite.setPosition(x, y); }
 
 void Entry::setPositionWord(cords x, cords y)
 {
@@ -57,27 +49,22 @@ void Entry::setPositionWord(cords x, cords y)
 }
 
 void Entry::move(cords x, cords y)
-{
-    m_sprite.move(x, y);
-}
+{ m_sprite.move(x, y); }
 
 void Entry::moveWord(cords x, cords y)
-{
-    m_sprite.move(
-            static_cast<cords>(ratio::x_size()) * x,
-            static_cast<cords>(ratio::y_size()) * y);
-}
+{ m_sprite.move(static_cast<cords>(ratio::x_size()) * x, static_cast<cords>(ratio::y_size()) * y); }
 
-sf::Rect<std::float_t> Entry::getGlobalBounds() const { return m_sprite.getGlobalBounds(); }
+sf::Rect<std::float_t> Entry::getGlobalBounds() const
+{ return m_sprite.getGlobalBounds(); }
 
-sf::Vector2f Entry::getOrigin() const { return m_sprite.getOrigin(); }
+sf::Vector2f Entry::getOrigin() const
+{ return m_sprite.getOrigin(); }
 
-sf::Vector2f Entry::getScale() const { return m_sprite.getScale(); }
+sf::Vector2f Entry::getScale() const
+{ return m_sprite.getScale(); }
 
 sf::Vector2f Entry::getPosition() const
-{
-    return m_sprite.getPosition();
-}
+{ return m_sprite.getPosition(); }
 
 sf::Vector2f Entry::getPositionWord() const
 {
@@ -86,9 +73,7 @@ sf::Vector2f Entry::getPositionWord() const
 }
 
 void Entry::scale(std::float_t x, std::float_t y)
-{
-    m_sprite.scale(x, y);
-}
+{ m_sprite.scale(x, y); }
 
 void Entry::update(sf::Time deltaTime)
 { assert(false); }
