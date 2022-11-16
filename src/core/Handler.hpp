@@ -74,15 +74,15 @@ private:
 template<typename Iterator>
 void Handler::draw(Iterator begin, Iterator end, const sf::RenderStates &states)
 {
-    for(auto it = begin; it != end; ++begin)
-        draw(*begin, states);
+    for(auto it = begin; it != end; ++it)
+        draw(*it, states);
 }
 
 template<typename Iterator>
 void Handler::draw_ui(Iterator begin, Iterator end, const sf::RenderStates &states)
 {
-    for(auto it = begin; it != end; ++begin)
-        draw_ui(*begin, states);
+    for(auto it = begin; it != end; ++it)
+        draw_ui(*it, states);
 }
 
 #endif //STAYNORMAL_HANDLER_HPP
