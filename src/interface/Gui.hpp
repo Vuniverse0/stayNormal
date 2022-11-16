@@ -1,7 +1,8 @@
-#pragma once
+#ifndef STAYNORMAL_GUI_HPP
+#define STAYNORMAL_GUI_HPP
 
-#include "../primitives/Entry.h"
-#include "Place.h"
+#include "../primitives/Entry.hpp"
+#include "Place.hpp"
 
 
 struct Gui : virtual Entry{
@@ -66,3 +67,5 @@ private:
     Range<iterator_type> m_group;
     float_t sum_a, m_separator;
 };
+
+#endif //STAYNORMAL_GUI_HPP

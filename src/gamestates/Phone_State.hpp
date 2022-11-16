@@ -6,7 +6,7 @@
 
 struct PhoneData : Game_State::Data {
     enum class PhoneState{None, Taking, Talking, Putting, Size, Error} state{PhoneState::None};
-    DATA_INDEX_DECL(PhoneData);
+    DATA_INDEX_DECL(PhoneData);///TODO
 };
 
 struct PhoneHandle : Game_State::Handle {

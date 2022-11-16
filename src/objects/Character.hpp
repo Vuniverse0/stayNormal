@@ -1,7 +1,8 @@
-#pragma once
+#ifndef STAYNORMAL_CHARACTER_HPP
+#define STAYNORMAL_CHARACTER_HPP
 
 #include "../primitives/Sprite.hpp"
-#include "../primitives/Animated.h"
+#include "../primitives/Animated.hpp"
 #include "../gamestates/Game_State.hpp"
 
 
@@ -55,3 +56,5 @@ void Character<Skin_T, Animation_T>::handle(const sf::Event &event)
     if(m_game_state)
         (*m_game_state)(event);
 }
+
+#endif //STAYNORMAL_CHARACTER_HPP

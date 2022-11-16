@@ -1,6 +1,7 @@
-#pragma once
+#ifndef STAYNORMAL_ANIMATED_HPP
+#define STAYNORMAL_ANIMATED_HPP
 
-#include "Animation.h"
+#include "Animation.hpp"
 
 
 template<std::size_t N>
@@ -30,3 +31,5 @@ bool Animated<N>::play(std::size_t index, float_t speed, bool direction)
 template<std::size_t N>
 bool Animated<N>::stop(std::size_t index, bool setAlt)
 { return m_animations[index].stop(m_p_sprite, setAlt); }
+
+#endif //STAYNORMAL_ANIMATED_HPP

@@ -1,4 +1,4 @@
-#include "Entry.h"
+#include "Entry.hpp"
 
 #include <SFML/Graphics/RenderTarget.hpp>
 

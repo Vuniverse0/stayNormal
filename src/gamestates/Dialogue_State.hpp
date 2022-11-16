@@ -1,10 +1,10 @@
 #ifndef STAYNORMAL_DIALOGUE_STATE_HPP
 #define STAYNORMAL_DIALOGUE_STATE_HPP
 
+#include <SFML/Graphics/Text.hpp>
+
 #include "Game_State.hpp"
 #include "../objects/Phrase.hpp"
-
-#include <SFML/Graphics/Text.hpp>
 
 
 struct DialogueData : Game_State::Data {

@@ -1,7 +1,5 @@
 #include "Game_State.hpp"
 
-#include <cassert>
-
 
 DATA_INDEX_IMPL(Game_State::Data);
 

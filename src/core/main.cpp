@@ -1,9 +1,9 @@
-#include "Handler.h"
-#include "Game.h"
-#include "../interface/Panel.h"
-#include "../objects/Main_Character.hpp"
-
 #include <iostream>
+
+#include "Handler.hpp"
+#include "Game.hpp"
+#include "../interface/Panel.hpp"
+#include "../objects/Main_Character.hpp"
 
 
 void enable(Button* b = nullptr){
@@ -16,6 +16,10 @@ void enable(Button* b = nullptr){
 
 int main()
 {
+#ifndef NDEBUG
+    std::cerr<<"Debug" << std::endl;
+#endif
+
     Ui ui;
     Word word;
     Handler handler(&word, &ui);
@@ -64,9 +68,6 @@ int main()
         handler.update(deltaTime); ///process process_events of game
         handler.render();
     }
-    #ifndef NDEBUG
-    std::cerr<<"debug" << std::endl;
-    #endif
     return 0;
 }
 

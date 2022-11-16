@@ -1,5 +1,5 @@
-#include "Gui.h"
-#include "../core/Handler.h"
+#include "Gui.hpp"
+#include "../core/Handler.hpp"
 
 
 Shorten::Shorten(sf::Vector2f a_normal_scale, sf::Sprite* a_p_sprite)

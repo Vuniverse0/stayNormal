@@ -1,8 +1,8 @@
-#include "Game.h"
-
-#include "Handler.h"
+#include "Game.hpp"
 
 #include <iostream>
+
+#include "Handler.hpp"
 
 
 void Game::draw()
@@ -38,20 +38,20 @@ void Game::update(sf::Time deltaTime) const
 
 void Game::setup( Handler* a_handler )
 {
-    if ( !a_handler && !handler )
+    if(!a_handler && !handler)
         std::cerr << "Game" << ": No Handler. Default Handler::gHandler" << std::endl;
 
     handler = a_handler ? a_handler : Handler::gHandler;
 
-    if (!m_setup || a_handler) {
-        if(!word)
-            std::cerr<<"Game: no word" << std::endl;
+    if(!m_setup || a_handler){
+        assert(word);///Game: no word;
         if(!word->handler)
             word->handler = handler;
-        if(!gui)
-            std::cerr<<"Game: no gui" << std::endl;
+
+        assert(gui);///Game: no gui;
         if (!gui->handler)
             gui->handler = handler;
+
         m_setup = true;
     }
 }

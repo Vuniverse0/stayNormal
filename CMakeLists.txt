@@ -14,6 +14,7 @@ add_executable(stayNormal
 
         src/primitives/Animation.cpp
         src/primitives/Entry.cpp
+        src/primitives/Sprite.cpp
 
         src/objects/Main_Character.cpp
         src/objects/Dialogue.cpp
@@ -31,8 +32,7 @@ add_executable(stayNormal
         src/gamestates/Phone_State.cpp
         src/gamestates/GameEvent.cpp
         src/gamestates/Dialogue_State.cpp
-
-        src/primitives/Sprite.cpp src/primitives/Sprite.hpp)
+        )
 
 #target_compile_options(stayNormal PUBLIC)
 

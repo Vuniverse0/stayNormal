@@ -1,4 +1,4 @@
-#include "Animation.h"
+#include "Animation.hpp"
 
 
 Animation::Animation(const std::string& a_sheet, pixels a_size_x, pixels a_size_y, frames a_count) ///x!=y
@@ -31,7 +31,6 @@ Animation& Animation::operator=(const Animation& other)
     return *this;
 }
 #endif
-
 
 bool Animation::play(sf::Sprite* sprite, std::float_t speed, bool direction)
 {

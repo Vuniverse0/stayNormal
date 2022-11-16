@@ -1,9 +1,6 @@
-//
-// Created by vuniverse on 11/26/21.
-//
+#include "Corner.hpp"
 
-#include "Corner.h"
-#include "../core/Handler.h"
+#include "../core/Handler.hpp"
 
 
 sf::Vector2f Corner::ship(const Anchor& anch, const sf::Sprite& m_sprite)

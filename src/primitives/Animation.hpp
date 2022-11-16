@@ -1,8 +1,9 @@
-#pragma once
-
-#include "../utility/typedefs_and_tools.h"
+#ifndef STAYNORMAL_ANIMATION_HPP
+#define STAYNORMAL_ANIMATION_HPP
 
 #include <SFML/Graphics/Texture.hpp>
+
+#include "../utility/typedefs_and_tools.h"
 
 
 struct Animation{
@@ -22,3 +23,5 @@ private:
     pixels m_size_x, m_size_y;
     std::float_t counter = 1.0f;
 };
+
+#endif //STAYNORMAL_ANIMATION_HPP

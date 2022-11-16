@@ -1,15 +1,15 @@
 #ifndef STAYNORMAL_SPRITE_HPP
 #define STAYNORMAL_SPRITE_HPP
 
-#include "../utility/typedefs_and_tools.h"
-
 #include <cmath>
 #include <string>
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Texture.hpp>
 
-#include "Entry.h"
+#include "Entry.hpp"
+
+#include "../utility/typedefs_and_tools.h"
 
 
 struct Sprite : virtual Entry{

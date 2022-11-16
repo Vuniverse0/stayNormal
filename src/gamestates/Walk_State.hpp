@@ -2,8 +2,7 @@
 #define STAYNORMAL_WALK_STATE_HPP
 
 #include "Game_State.hpp"
-
-#include "../interface/Directions.h"
+#include "../interface/Directions.hpp"
 #include "../primitives/Sprite.hpp"
 
 

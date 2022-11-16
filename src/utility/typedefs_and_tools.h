@@ -1,4 +1,5 @@
-#pragma once
+#ifndef STAYNORMAL_TYPEDEFS_AND_TOOLS_HPP
+#define STAYNORMAL_TYPEDEFS_AND_TOOLS_HPP
 
 #include <cstdint>
 #include <cmath>
@@ -6,17 +7,15 @@
 
 #include <SFML/Graphics/Sprite.hpp>
 
-
 #define GAME_MAKER_SCREEN_WIDTH 1366.0f //TODO remake these maybe
 #define GAME_MAKER_SCREEN_HEIGHT 768.0f
 #define DEFAULT_FPS 60
 #define EMPTY "null.png"
 
 
-typedef std::uint16_t frames;
-typedef std::uint16_t pixels;
-typedef std::float_t cords;
-
+using frames = std::uint16_t;
+using pixels = std::uint16_t;
+using cords = std::float_t;
 
 namespace ratio {
     cords valuable_ratio();
@@ -60,3 +59,5 @@ T enum_default()
 template<> \
 inline enum_name enum_default<enum_name>() \
 { return enum_name::that; }
+
+#endif //STAYNORMAL_TYPEDEFS_AND_TOOLS_HPP

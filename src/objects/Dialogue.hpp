@@ -1,7 +1,7 @@
 #ifndef STAYNORMAL_DIALOGUE_HPP
 #define STAYNORMAL_DIALOGUE_HPP
 
-#include "../primitives/Entry.h"
+#include "../primitives/Entry.hpp"
 #include "../gamestates/Dialogue_State.hpp"
 
 

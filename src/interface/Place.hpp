@@ -1,6 +1,7 @@
-#pragma once
+#ifndef STAYNORMAL_PLACE_HPP
+#define STAYNORMAL_PLACE_HPP
 
-#include "Directions.h"
+#include "Directions.hpp"
 #include "../utility/Range.hpp"
 
 
@@ -70,4 +71,6 @@ namespace Place{
             }(args),...);
         }
     }
-};
+}
+
+#endif //STAYNORMAL_PLACE_HPP

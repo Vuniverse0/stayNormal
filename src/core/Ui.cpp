@@ -1,9 +1,9 @@
-#include "Game.h"
-
-#include "Handler.h"
-#include "../interface/Panel.h"
+#include "Game.hpp"
 
 #include <iostream>
+
+#include "Handler.hpp"
+#include "../interface/Panel.hpp"
 
 
 void Ui::draw()

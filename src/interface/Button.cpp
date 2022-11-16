@@ -1,7 +1,8 @@
-#include "Button.h"
+#include "Button.hpp"
 
 #include <utility>
-#include "../core/Handler.h"
+
+#include "../core/Handler.hpp"
 
 #define MAGIC_RATIO_BUTTONS 0.5f //TODO delete this shit, or no)))
 

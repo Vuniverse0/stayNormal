@@ -9,6 +9,6 @@ struct GameEvent {
            // std::string
         }call;
     }data;
-};
+};///TODO
 
 #endif //STAYNORMAL_GAMEEVENT_HPP

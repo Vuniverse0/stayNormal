@@ -1,11 +1,12 @@
-#pragma once
+#ifndef STAYNORMAL_GAME_HPP
+#define STAYNORMAL_GAME_HPP
 
-#include "../utility/Range.hpp"
+#include <array>
 
 #include <SFML/Window/Event.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
 
-#include <array>
+#include "../utility/Range.hpp"
 
 
 struct Handler;
@@ -15,9 +16,7 @@ struct Panel;
 struct Button;
 
 struct Ui{
-    Ui() = default;
-
-    Handler* handler = nullptr;
+    Handler* handler = {nullptr};
 
     using array_iterator = std::array<Gui*,0>::iterator;
 
@@ -34,15 +33,14 @@ struct Ui{
     sf::RenderStates ui_states = sf::BlendAdd;
             //sf::BlendAdd; ///TODO create self made blend mode
     sf::RenderStates states = sf::RenderStates::Default;
+
 private:
-    /// true when events or process animation (need to set from inside of ui classes, by Handler(he draw ui on window))
-    bool uiChanged = true;
+    ///true when events or process animation (need to set from inside of ui classes, by Handler(he draw ui on window))
+    bool uiChanged{true};
 };
 
 struct Word{
-    Word() = default;
-
-    Handler* handler = nullptr;
+    Handler* handler{nullptr};
 
     using array_iterator = std::array<Entry*,0>::iterator;
 
@@ -58,12 +56,10 @@ struct Word{
 };
 
 struct Game {
-    Game() = default;
+    Handler* handler{nullptr};
 
-    Handler* handler = nullptr;
-
-    Ui* gui = nullptr;
-    Word* word = nullptr;
+    Ui* gui{nullptr};
+    Word* word{nullptr};
 
     void setup( Handler* a_handler = nullptr );
 
@@ -73,5 +69,7 @@ struct Game {
     void update(sf::Time deltaTime) const;
 
 private:
-    bool m_setup = false;
+    bool m_setup{false};
 };
+
+#endif //STAYNORMAL_GAME_HPP

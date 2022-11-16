@@ -43,8 +43,9 @@ sf::Vector2f Sprite::getPosition() const
 
 sf::Vector2f Sprite::getPositionWord() const
 {
-    return {static_cast<cords>(ratio::x_size()) / m_sprite.getPosition().x,
-            static_cast<cords>(ratio::y_size()) / m_sprite.getPosition().y };
+    return{
+        static_cast<cords>(ratio::x_size()) / m_sprite.getPosition().x,
+        static_cast<cords>(ratio::y_size()) / m_sprite.getPosition().y};
 }
 
 void Sprite::scale(std::float_t x, std::float_t y)

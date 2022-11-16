@@ -1,10 +1,10 @@
-#include "Game.h"
-
-#include "Handler.h"
-#include "../primitives/Entry.h"
+#include "Game.hpp"
 
 #include <iostream>
 #include <cassert>
+
+#include "Handler.hpp"
+#include "../primitives/Entry.hpp"
 
 
 void Word::draw()

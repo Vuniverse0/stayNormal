@@ -1,31 +1,24 @@
-#pragma once
-
-#include "../utility/typedefs_and_tools.h"
-
-#include "Game.h"
+#ifndef STAYNORMAL_HANDLER_HPP
+#define STAYNORMAL_HANDLER_HPP
 
 #include <iterator>
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/RenderTexture.hpp>
-#include <iostream>
+
+#include "../utility/typedefs_and_tools.h"
+#include "Game.hpp"
 
 
 struct Entry;
 struct Gui;
 
 struct Handler {//singleton
-private:
-    sf::RenderWindow m_window;
-    sf::RenderTexture m_ui;
-    sf::RenderTexture m_word;
-    sf::Time m_time_per_frame{};
-
-    bool m_IsPaused{false}, m_ui_updated{true};
-public:
     ///singleton
-    inline static Handler* gHandler{nullptr};
     Handler(Word* word, Ui* ui);
+    ~Handler();
+
+    inline static Handler* gHandler{nullptr};
 
     ///ui rerender
     void update_ui();
@@ -69,19 +62,27 @@ public:
 
     bool exit();
 
-    ~Handler();
+private:
+    sf::RenderWindow m_window;
+    sf::RenderTexture m_ui;
+    sf::RenderTexture m_word;
+    sf::Time m_time_per_frame{};
+
+    bool m_IsPaused{false}, m_ui_updated{true};
 };
 
 template<typename Iterator>
 void Handler::draw(Iterator begin, Iterator end, const sf::RenderStates &states)
 {
-    for(;begin != end; ++begin)
+    for(auto it = begin; it != end; ++begin)
         draw(*begin, states);
 }
 
 template<typename Iterator>
 void Handler::draw_ui(Iterator begin, Iterator end, const sf::RenderStates &states)
 {
-    for(;begin != end; ++begin)
+    for(auto it = begin; it != end; ++begin)
         draw_ui(*begin, states);
 }
+
+#endif //STAYNORMAL_HANDLER_HPP

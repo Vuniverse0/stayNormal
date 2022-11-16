@@ -1,6 +1,8 @@
 #ifndef STAYNORMAL_GAME_STATE_HPP
 #define STAYNORMAL_GAME_STATE_HPP
 
+#include <cassert>
+
 #include <SFML/Window/Event.hpp>
 
 

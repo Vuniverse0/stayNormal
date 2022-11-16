@@ -1,7 +1,5 @@
 #include "Phone_State.hpp"
 
-#include <cassert>
-
 
 DATA_INDEX_IMPL(PhoneData);
 

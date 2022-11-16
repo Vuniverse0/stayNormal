@@ -5,12 +5,10 @@
 
 void Text::update(sf::Time deltaTime)
 {
-
 }
 
 void Text::handle(const sf::Event &event)
 {
-
 }
 
 void Text::m_draw(sf::RenderTarget &target, const sf::RenderStates &states) const

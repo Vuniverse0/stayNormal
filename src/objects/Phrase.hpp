@@ -7,7 +7,7 @@
 
 
 struct Phrase {
-    Phrase(std::string_view message);
+    explicit Phrase(std::string_view message);
 
     ///return null pointer if this is end
     virtual Phrase* next();

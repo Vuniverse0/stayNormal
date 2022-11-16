@@ -1,7 +1,7 @@
-#include "Handler.h"
-#include "Game.h"
+#include "Handler.hpp"
 
-#include "../interface/Gui.h"
+#include "Game.hpp"
+#include "../interface/Gui.hpp"
 
 
 Handler::Handler(Word* word, Ui* ui) noexcept(noexcept(sf::RenderWindow()))

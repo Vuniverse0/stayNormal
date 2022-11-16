@@ -1,8 +1,5 @@
 #include "Walk_State.hpp"
 
-#include <cassert>
-#include <iostream>
-
 
 DATA_INDEX_IMPL(WalkData);
 

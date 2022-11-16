@@ -1,6 +1,7 @@
-#pragma once
+#ifndef STAYNORMAL_BUTTON_HPP
+#define STAYNORMAL_BUTTON_HPP
 
-#include "Gui.h"
+#include "Gui.hpp"
 #include "../primitives/Sprite.hpp"
 
 
@@ -18,3 +19,5 @@ private:
     Hover m_hover;
     std::function<void()> m_changer;
 };
+
+#endif //STAYNORMAL_BUTTON_HPP

@@ -19,7 +19,10 @@ std::size_t Phrase::answer() const
 
 
 void Question::answer(std::size_t n)
-{ assert(n <= m_answers), m_answer = n; }
+{
+    assert(n <= m_answers);
+    m_answer = n;
+}
 
 Phrase* Question::next()
 { return m_next[m_answer - 1]; }

@@ -1,5 +1,6 @@
-#include "Panel.h"
-#include "../core/Handler.h"
+#include "Panel.hpp"
+
+#include "../core/Handler.hpp"
 
 
 void Panel::m_draw(sf::RenderTarget& target, const sf::RenderStates& states) const

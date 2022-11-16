@@ -1,7 +1,8 @@
-#pragma once
+#ifndef STAYNORMAL_PANEL_HPP
+#define STAYNORMAL_PANEL_HPP
 
-#include "Corner.h"
-#include "Button.h"
+#include "Corner.hpp"
+#include "Button.hpp"
 
 
 struct Panel : Gui, Sprite{
@@ -17,3 +18,5 @@ struct Panel : Gui, Sprite{
 private:
     Range<iterator_type> m_buttons;
 };
+
+#endif //STAYNORMAL_PANEL_HPP

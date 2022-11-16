@@ -31,7 +31,7 @@ public:
     {
         for(std::size_t i = 0; i <= n; ++i)
             if(m_begin + i == m_end)
-                throw std::out_of_range("utility/Range");
+                throw std::out_of_range("utility/Range.hpp:34");
         return (*this)[n];
     }
 };

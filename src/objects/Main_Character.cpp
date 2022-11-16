@@ -2,7 +2,6 @@
 
 #include <iostream>
 
-
 MAIN_CHARACTER_ANIMATIONS;
 #undef MAIN_CHARACTER_ANIMATIONS
 

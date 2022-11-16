@@ -1,4 +1,4 @@
-#include "Directions.h"
+#include "Directions.hpp"
 
 
 static Direction inverse(Direction direction)
