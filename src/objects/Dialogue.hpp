@@ -2,7 +2,7 @@
 #define STAYNORMAL_DIALOGUE_HPP
 
 #include "../primitives/Entry.hpp"
-#include "../gamestates/Dialogue_State.hpp"
+#include "../gamestates/DialogueState.hpp"
 
 
 struct Dialogue : Entry{

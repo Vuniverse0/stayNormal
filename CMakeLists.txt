@@ -31,7 +31,7 @@ add_executable(stayNormal
         src/gamestates/Walk_State.cpp
         src/gamestates/Phone_State.cpp
         src/gamestates/GameEvent.cpp
-        src/gamestates/Dialogue_State.cpp
+        src/gamestates/DialogueState.cpp
         )
 
 #target_compile_options(stayNormal PUBLIC)

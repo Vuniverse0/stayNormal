@@ -1,4 +1,4 @@
-#include "Dialogue_State.hpp"
+#include "DialogueState.hpp"
 
 
 DATA_INDEX_IMPL(DialogueData);

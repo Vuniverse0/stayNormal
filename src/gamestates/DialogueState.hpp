@@ -1,7 +1,7 @@
-#ifndef STAYNORMAL_DIALOGUE_STATE_HPP
-#define STAYNORMAL_DIALOGUE_STATE_HPP
+#ifndef STAYNORMAL_DIALOGUESTATE_HPP
+#define STAYNORMAL_DIALOGUESTATE_HPP
 
-#include <SFML/Graphics/Text.hpp>
+#include <SFML/Graphics/Text.hpp>//TODO maybe hide realization (voids or abstract layer)
 
 #include "Game_State.hpp"
 #include "../objects/Phrase.hpp"
@@ -25,4 +25,4 @@ protected:
     DialogueHandle() = default;
 };
 
-#endif //STAYNORMAL_DIALOGUE_STATE_HPP
+#endif //STAYNORMAL_DIALOGUESTATE_HPP

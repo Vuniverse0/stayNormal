@@ -22,9 +22,11 @@ public:
         ,m_animations{animations}
         ,m_game_state{game_state}
     {}
+
+    ~Character() override = default;
+
     void update(sf::Time deltaTime) override;
     void handle(const sf::Event& event) override;
-    ~Character() override = default;
 
 protected:
     Game_State *m_game_state;

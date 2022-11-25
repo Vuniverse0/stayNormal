@@ -18,7 +18,7 @@ void Sprite::setPosition(cords x, cords y)
 
 void Sprite::setPositionWord(cords x, cords y)
 {
-    m_sprite.setPosition(
+    m_sprite.setPosition(//Todo review this question
             static_cast<cords>(ratio::x_size()) * x,
             static_cast<cords>(ratio::y_size()) * y);
 }
